@@ -1,2 +1,41 @@
 @import normalize
 @import base/mixins
+
+#bricks {
+  position: absolute;
+  z-index:2;
+}
+
+.wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.w {
+  background-color: #1581a3;
+  width: 100%;
+  height: 200%;
+  left: 0;
+  top: -70%;
+  box-sizing: content-box;
+  overflow: hidden;
+  -webkit-transform: rotate(35deg);
+  -moz-transform: rotate(35deg);
+  -o-transform: rotate(35deg);
+  transform: rotate(-35deg);
+  position: absolute;
+  /*
+  border-top: 366px solid red;
+  border-right: 366px solid transparent;
+  border-left: 200px solid red;
+  border-bottom: 600px solid transparent;*/
+  /*font-size: 38em;
+  font-family: sans-serif;*/
+
+  /*  font-weight: 900;
+  position: absolute;
+  TOP: 217px;
+  left: 0;
+  line-height: 0;
+  z-index: -1;*/
+}

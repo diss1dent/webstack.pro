@@ -24,7 +24,10 @@ AppAsset::register($this);
 <body>
 <?php $this->beginBody() ?>
 
+<canvas id="bricks">Обновите браузер</canvas>
+
 <div class="wrap">
+    <div class="w">w</div>
     <?php
     NavBar::begin([
         'brandLabel' => 'My Company',
