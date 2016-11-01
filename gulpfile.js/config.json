@@ -6,9 +6,7 @@
 
   "tasks": {
     "browserSync": {
-      "server": {
-        "baseDir": "web"
-      }
+      "proxy": "http://webstack.pro.local/webstack.pro/web/"
     },
 
     "static": {
@@ -17,8 +15,8 @@
     },
 
     "js": {
-      "src": "javascripts",
-      "dest": "javascripts",
+      "src": "js",
+      "dest": "js",
       "entries": {
         "app": ["./app.js"]
       },
@@ -30,8 +28,8 @@
       "extractSharedJs": false
     },
     "css": {
-      "src": "stylesheets",
-      "dest": "stylesheets",
+      "src": "scss",
+      "dest": "css",
       "autoprefixer": {
         "browsers": ["last 3 versions"]
       },

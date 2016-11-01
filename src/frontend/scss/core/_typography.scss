@@ -1,0 +1,148 @@
+/*--------------------------------
+
+	Basic, low level typography
+
+*/
+
+$typography-elems:
+	'p',
+	'ul',
+	'ol';
+
+$media-elems:
+	'.blockquote',
+	'.button-wrapper',
+	'.media',
+	'.table-wrapper';
+
+// Headings
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: 100%;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+	@include content-margins('&');
+	font-weight: $w--bold;
+	line-height: 1;
+	margin-top: 1em;
+
+	a {
+		font-weight: $w--bold;
+	}
+}
+
+.h1 {
+	font-size: $h--large;
+	line-height: 1;
+	margin-bottom: .5em;
+
+	@include mq('tablet') {
+		font-size: $h--x-large;
+	}
+
+	@include mq('desktop') {
+		font-size: $h--xxx-large;
+		margin-bottom: .3em;
+	}
+}
+
+.h2 {
+	font-size: $h--medium;
+	margin-bottom: .6em;
+
+	@include mq('tablet') {
+		font-size: $h--large;
+	}
+
+	@include mq('desktop') {
+		font-size: $h--xx-large;
+		margin-bottom: .4em;
+	}
+}
+
+.h3 {
+	font-size: $h--small;
+	margin-bottom: .7em;
+
+	@include mq('tablet') {
+		font-size: $h--medium;
+	}
+
+	@include mq('desktop') {
+		font-size: $h--x-large;
+		margin-bottom: .5em;
+	}
+}
+
+.h4 {
+	font-size: $h--x-small;
+	margin-bottom: .7em;
+
+	@include mq('tablet') {
+		font-size: $h--small;
+	}
+
+	@include mq('desktop') {
+		font-size: $h--medium;
+		margin-bottom: .4em;
+	}
+}
+
+.h5 {
+	font-size: $h--xx-small;
+	margin-bottom: .8em;
+
+	@include mq('tablet') {
+		font-size: $h--x-small;
+	}
+}
+
+.h6 {
+	font-size: $h--xxx-small;
+	margin-bottom: .9em;
+
+	@include mq('tablet') {
+		font-size: $h--xx-small;
+	}
+}
+
+
+// Basic typography styling
+
+#{$typography-elems} {
+	@include content-margins('&');
+	margin-bottom: 1em;
+}
+
+#{$media-elems} {
+	@include content-margins('&');
+	margin-bottom: 1.25em;
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+
+// Stylistic elements
+
+b,
+strong {
+	font-weight: $w--bold;
+}
+
+small {
+	font-size: 80%;
+}

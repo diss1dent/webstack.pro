@@ -6,7 +6,7 @@ Include the proper gulp-revisioned version of an asset in your Twig templates wi
 ###Usage:
 
 ```twig
-<link rel="stylesheet" href="{{ 'assets/stylesheets/app.css' | gulp_rev }}">
+<link rel="stylesheet" href="{{ 'scss' | gulp_rev }}">
 ```
 
 

@@ -24,7 +24,7 @@ AppAsset::register($this);
 <body>
 <?php $this->beginBody() ?>
 
-<canvas id="bricks">Обновите браузер</canvas>
+<canvas id="bricks">Update your browser</canvas>
 
 <div class="wrap">
     <div class="w">w</div>

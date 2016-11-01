@@ -1,0 +1,46 @@
+.base-hidden {
+	@include hidden;
+}
+
+.base-visible {
+	@include visible;
+}
+
+.base-visible-inline {
+	@include visible('inline');
+}
+.base-visible-inline-block {
+	@include visible('inline-block');
+}
+
+.base-visible-td {
+	@include visible('table-cell');
+}
+
+@each $name, $min-width in $breakpoints {
+
+	@include mq($name) {
+
+		.#{$name}-hidden {
+			@include hidden;
+		}
+
+		.#{$name}-visible {
+			@include visible;
+		}
+
+		.#{$name}-visible-inline {
+			@include visible('inline');
+		}
+
+		.#{$name}-visible-inline-block {
+			@include visible('inline-block');
+		}
+
+		.#{$name}-visible-td {
+			@include visible('table-cell');
+		}
+
+	}
+
+}

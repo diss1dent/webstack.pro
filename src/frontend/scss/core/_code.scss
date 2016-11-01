@@ -1,0 +1,20 @@
+code,
+pre {
+	word-wrap: break-word;
+	white-space: pre-wrap;
+	font-family: 'courier new', monospace, serif;
+	font-size: $p--small;
+	font-style: normal;
+	font-weight: normal;
+	line-height: $lh--x-small;
+	background-color: $c--grey-x-light;
+	color: $c--grey-dark;
+}
+
+code {
+	padding: $spacing-unit--x-small;
+}
+
+pre {
+	padding: $spacing-unit--small;
+}

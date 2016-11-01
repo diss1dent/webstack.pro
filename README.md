@@ -4,6 +4,16 @@ npm run watch: "webpack --watch --config webpack.config.development.js",
 npm run build: "webpack -p --config webpack.config.production.js",
 npm run json : "webpack -- json --profile >stats.json"
 
+choose one
+"tasks": {
+    "browserSync": {
+      "server": {        
+        "baseDir": "web",
+        "index": "index.php"
+      }
+      "proxy": {"http://webstack.pro.local/webstack.pro/web/",}
+    },
+
 Yii 2 Basic Project Template
 ============================
 

@@ -1,0 +1,48 @@
+$icon-size: 1em;
+
+// basic icon
+// <svg class="icon icon-name"></svg>
+
+.icon {
+	display: block;
+	fill: $c--black;
+	width: $icon-size;
+	height: $icon-size;
+
+	&::before {
+		display: block;
+	}
+}
+
+
+// text with an icon
+// <span class="icon-text"><svg class="icon-text__i"></svg> <span class="icon-text__t"></span></span>
+// <span class="icon-text"><span class="icon-text__t"></span> <svg class="icon-text__i"></svg></span>
+
+.icon-text {
+	display: inline-block;
+	position: relative;
+
+	&__i {
+		width: $icon-size;
+		height: $icon-size;
+		position: absolute;
+		top: 50%; right: 0;
+		transform: translateY(-50%);
+
+		&:first-child {
+			right: auto; left: 0;
+		}
+	}
+
+	&__t {
+		padding-right: $icon-size + .5em;
+
+		&:last-child {
+			padding: {
+				right: 0;
+				left: $icon-size + .5em;
+			}
+		}
+	}
+}
