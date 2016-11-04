@@ -1,3 +1,9 @@
+.navbar-brand {
+	img {
+		width: 5rem;
+	}
+}
+
 .site-content {
 	@include soft--ends($spacing-unit--small);
 	position: relative;

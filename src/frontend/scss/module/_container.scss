@@ -8,7 +8,7 @@
 	}
 
 	@include mq('desktop') {
-		@include push--sides($page-gutter--desktop);
+		@include push--auto;
 	}
 
 	@include mq($max-width + ( strip-unit($page-gutter--desktop) * 10 * 2 )) {

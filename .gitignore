@@ -27,7 +27,7 @@ phpunit.phar
 /phpunit.xml
 
 # Gulp starter
-web/assets
+/web/assets/*
 .DS_Store
 .sass-cache
 .publish

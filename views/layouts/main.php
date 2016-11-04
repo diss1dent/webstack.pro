@@ -20,17 +20,17 @@ AppAsset::register($this);
     <?= Html::csrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
+    <link href="<?= Yii::$app->controller->getCssBundle() ?>" rel="stylesheet">
 </head>
 <body>
 <?php $this->beginBody() ?>
-
 <canvas id="bricks">Update your browser</canvas>
 
 <div class="wrap">
     <div class="w">w</div>
     <?php
     NavBar::begin([
-        'brandLabel' => 'My Company',
+        'brandLabel' => Html::img(Yii::$app->controller->getImage("images/logo.png"), ['alt'=>'websites development']),
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
             'class' => 'navbar-inverse navbar-fixed-top',
@@ -74,7 +74,7 @@ AppAsset::register($this);
         <p class="pull-right"><?= Yii::powered() ?></p>
     </div>
 </footer>
-
+<script src="<?= Yii::$app->controller->getJsBundle() ?>"></script>
 <?php $this->endBody() ?>
 </body>
 </html>

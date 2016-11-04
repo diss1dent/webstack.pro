@@ -6,33 +6,46 @@ use Yii;
 use yii\web\Controller;
 use yii\helpers\ArrayHelper;
 
+//$params = require(__DIR__ . './../config/params.php');
+/*var_dump($assets);*/
+
 /**
- * Global base controller
+ * Create path for apps from gulp tasks
  */
 class AssetsController extends Controller
 {
-    /**
-     * @var string Path to js bundle
-     */
-    public $jsBundle = 'app.js';
-    /**
-     * @var string Path to css bundle
-     */
-    public $cssBundle = 'app.css';
+    public $jsBundle = 'js/app.js';
+    public $cssBundle = 'css/app.css';
 
-    /**
-     * @return string Return CSS bundle
-     */
     public function getCssBundle()
     {
-        return '/web/assets/' . ArrayHelper::getValue(Yii::$app->params['assets'], $this->cssBundle);
+        if ($params['assets'] <> null ) {
+            return Yii::$app->homeUrl. 'assets/' . (ArrayHelper::getValue(Yii::$app->params['assets'], $this->cssBundle));
+
+        }
+
+        return Yii::$app->homeUrl. 'assets/' . $this->cssBundle;
+
     }
 
-    /**
-     * @return string Return JS bundle
-     */
     public function getJsBundle()
     {
-        return '/web/assets/' . ArrayHelper::getValue(Yii::$app->params['assets'], $this->jsBundle);
+        if ($params['assets'] <> null ) {
+            return Yii::$app->homeUrl. 'assets/' . (ArrayHelper::getValue(Yii::$app->params['assets'], $this->jsBundle));
+        }
+
+        return Yii::$app->homeUrl. 'assets/' . $this->cssBundle;
+
     }
+
+    public function getImage($name)
+    {
+        if ( $params['assets'] <> null ) {
+            return Yii::$app->homeUrl. 'assets/' . ArrayHelper::getValue(Yii::$app->params['assets'], $name);
+        }
+
+        return Yii::$app->homeUrl. 'assets/' . $name;
+
+    }
+
 }
